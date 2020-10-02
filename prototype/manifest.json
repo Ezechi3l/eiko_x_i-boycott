@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "BuyOrNot",
+  "version": "0.1",
+  "description": "Display a warning on brand currently boycotted.",
+  "icons": {
+    "48": "icons/toolbar_logo.svg",
+    "96": "icons/toolbar_logo.svg"
+  },
+  "browser_action": {
+    "default_icon": "icons/toolbar_logo.svg",
+    "default_title": "BuyOrNot",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": ["tabs"]
+}

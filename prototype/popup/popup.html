@@ -1,0 +1,32 @@
+<!--
+  Popup qui s'affiche au click sur le bouton dans la toolbar du navigateur.
+  Pour l'activer il faut ajouter ajouter "default_popup" dans le manifest.json dans "browser_action"
+    https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
+  Pour communiquer entre le script background.js et le script popup.js :
+    https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css"/>
+  </head>
+
+  <body class="popup-content">
+    <h2 class="popup-title">
+      BuyOrNot
+    </h2>
+
+    <p id="site-not-boycotted" class="hidden popup-text">
+      Ce site ne fait l'objet d'aucune campagne de boycott.
+    </p>
+
+    <p id="site-boycotted" class="hidden popup-text">
+      Ce site est l'object d'une campagne de boycott.
+      <a id="site-boycotted-link" href="" class="popup-text-link">Voir la campagne</a>
+    </p>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

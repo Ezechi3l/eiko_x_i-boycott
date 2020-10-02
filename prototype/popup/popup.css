@@ -1,0 +1,40 @@
+html {
+  color: #353535;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup-content {
+  padding: 10px 0;
+}
+
+.popup-title {
+  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  color: #0093D6;
+  font-size: 17px;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0 20px 10px;
+  text-align: center;
+}
+
+.popup-text {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.popup-text-link {
+  color: #af0000;
+  display: block;
+  margin-top: 10px;
+}
+
+.popup-text-link:hover,
+.popup-text-link:focus,
+.popup-text-link:active {
+  text-decoration: none;
+}
